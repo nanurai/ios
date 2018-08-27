@@ -27,11 +27,26 @@
 		4F664AF82130B63B00B86FD0 /* Data+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F664AF72130B63B00B86FD0 /* Data+Hex.swift */; };
 		4F664AFB2130C4A700B86FD0 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F664AF92130C4A700B86FD0 /* CommonCrypto.framework */; };
 		4F664AFC2130C4A700B86FD0 /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F664AFA2130C4A700B86FD0 /* Crypto.framework */; };
+		4F7EE3D621336D650066E365 /* UIScrollView+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7EE3D521336D650066E365 /* UIScrollView+Alignment.swift */; };
+		4F7EE3D8213379090066E365 /* NanuraiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7EE3D7213379090066E365 /* NanuraiTextField.swift */; };
 		4FB8D7D02124D8F8003B2908 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB8D7CF2124D8F8003B2908 /* KeychainAccess.framework */; };
 		4FB8D7D32124DB1F003B2908 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8D7D22124DB1F003B2908 /* Mnemonic.swift */; };
 		4FB8D7D72124DC02003B2908 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8D7D62124DC02003B2908 /* String+Hex.swift */; };
 		4FB8D7DA2124DC96003B2908 /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8D7D92124DC96003B2908 /* RandomNumberGenerator.swift */; };
 		4FB8D7DC2124DCDC003B2908 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8D7DB2124DCDC003B2908 /* WordList.swift */; };
+		4FD7E82C2132D8CD009CBB44 /* MnemonicPhraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD7E82B2132D8CD009CBB44 /* MnemonicPhraseViewController.swift */; };
+		4FD7E82E2132DA77009CBB44 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD7E82D2132DA77009CBB44 /* Sizes.swift */; };
+		4FD7E8392132E5E7009CBB44 /* chinese_traditional.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD7E8302132E5E6009CBB44 /* chinese_traditional.txt */; };
+		4FD7E83A2132E5E7009CBB44 /* japanese.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD7E8312132E5E6009CBB44 /* japanese.txt */; };
+		4FD7E83B2132E5E7009CBB44 /* french.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD7E8322132E5E6009CBB44 /* french.txt */; };
+		4FD7E83C2132E5E7009CBB44 /* Wordlists.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD7E8332132E5E6009CBB44 /* Wordlists.xcassets */; };
+		4FD7E83D2132E5E7009CBB44 /* chinese_simplified.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD7E8342132E5E6009CBB44 /* chinese_simplified.txt */; };
+		4FD7E83E2132E5E7009CBB44 /* english.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD7E8352132E5E6009CBB44 /* english.txt */; };
+		4FD7E83F2132E5E7009CBB44 /* spanish.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD7E8362132E5E6009CBB44 /* spanish.txt */; };
+		4FD7E8402132E5E7009CBB44 /* italian.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD7E8372132E5E6009CBB44 /* italian.txt */; };
+		4FD7E8412132E5E7009CBB44 /* korean.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD7E8382132E5E6009CBB44 /* korean.txt */; };
+		4FD7E8432132F1FF009CBB44 /* MnemonicWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD7E8422132F1FF009CBB44 /* MnemonicWordView.swift */; };
+		4FD7E84521331342009CBB44 /* ConfirmMnemonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD7E84421331342009CBB44 /* ConfirmMnemonicViewController.swift */; };
 		4FE8822C2124D89300027D74 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8822B2124D89200027D74 /* KeyManager.swift */; };
 		4FFDC4C5213229CE00BE7B8F /* NewWalletController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDC4C4213229CE00BE7B8F /* NewWalletController.swift */; };
 		4FFDC4C721322C4300BE7B8F /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDC4C621322C4300BE7B8F /* Appearance.swift */; };
@@ -82,11 +97,26 @@
 		4F664AF72130B63B00B86FD0 /* Data+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Hex.swift"; sourceTree = "<group>"; };
 		4F664AF92130C4A700B86FD0 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
 		4F664AFA2130C4A700B86FD0 /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
+		4F7EE3D521336D650066E365 /* UIScrollView+Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Alignment.swift"; sourceTree = "<group>"; };
+		4F7EE3D7213379090066E365 /* NanuraiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanuraiTextField.swift; sourceTree = "<group>"; };
 		4FB8D7CF2124D8F8003B2908 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		4FB8D7D22124DB1F003B2908 /* Mnemonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
 		4FB8D7D62124DC02003B2908 /* String+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hex.swift"; sourceTree = "<group>"; };
 		4FB8D7D92124DC96003B2908 /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
 		4FB8D7DB2124DCDC003B2908 /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
+		4FD7E82B2132D8CD009CBB44 /* MnemonicPhraseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicPhraseViewController.swift; sourceTree = "<group>"; };
+		4FD7E82D2132DA77009CBB44 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		4FD7E8302132E5E6009CBB44 /* chinese_traditional.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chinese_traditional.txt; sourceTree = "<group>"; };
+		4FD7E8312132E5E6009CBB44 /* japanese.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = japanese.txt; sourceTree = "<group>"; };
+		4FD7E8322132E5E6009CBB44 /* french.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = french.txt; sourceTree = "<group>"; };
+		4FD7E8332132E5E6009CBB44 /* Wordlists.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Wordlists.xcassets; sourceTree = "<group>"; };
+		4FD7E8342132E5E6009CBB44 /* chinese_simplified.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chinese_simplified.txt; sourceTree = "<group>"; };
+		4FD7E8352132E5E6009CBB44 /* english.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = english.txt; sourceTree = "<group>"; };
+		4FD7E8362132E5E6009CBB44 /* spanish.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spanish.txt; sourceTree = "<group>"; };
+		4FD7E8372132E5E6009CBB44 /* italian.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = italian.txt; sourceTree = "<group>"; };
+		4FD7E8382132E5E6009CBB44 /* korean.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = korean.txt; sourceTree = "<group>"; };
+		4FD7E8422132F1FF009CBB44 /* MnemonicWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicWordView.swift; sourceTree = "<group>"; };
+		4FD7E84421331342009CBB44 /* ConfirmMnemonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmMnemonicViewController.swift; sourceTree = "<group>"; };
 		4FE8822B2124D89200027D74 /* KeyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 		4FFDC4C4213229CE00BE7B8F /* NewWalletController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWalletController.swift; sourceTree = "<group>"; };
 		4FFDC4C621322C4300BE7B8F /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
@@ -127,6 +157,8 @@
 			children = (
 				4F23BF852131D21B00C953F7 /* WelcomeViewController.swift */,
 				4FFDC4C4213229CE00BE7B8F /* NewWalletController.swift */,
+				4FD7E82B2132D8CD009CBB44 /* MnemonicPhraseViewController.swift */,
+				4FD7E84421331342009CBB44 /* ConfirmMnemonicViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -155,6 +187,7 @@
 		4F3865E92123AAF7006C302C /* Nanurai */ = {
 			isa = PBXGroup;
 			children = (
+				4FD7E82F2132E5E6009CBB44 /* Wordlists */,
 				4FB8D7D82124DC85003B2908 /* Random */,
 				4FE8822A2124D89200027D74 /* Managers */,
 				4F3866212123AE9C006C302C /* Extensions */,
@@ -202,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				4F23BF8B2131F6B000C953F7 /* NanuraiButton.swift */,
+				4FD7E8422132F1FF009CBB44 /* MnemonicWordView.swift */,
+				4F7EE3D7213379090066E365 /* NanuraiTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +259,7 @@
 				4F38661F2123ADDB006C302C /* Colors.swift */,
 				4F23BF8D2131F7D400C953F7 /* Fonts.swift */,
 				4FFDC4C621322C4300BE7B8F /* Appearance.swift */,
+				4FD7E82D2132DA77009CBB44 /* Sizes.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -236,6 +272,7 @@
 				4F664AF72130B63B00B86FD0 /* Data+Hex.swift */,
 				4F23BF8F2131F8E700C953F7 /* UIButton+Style.swift */,
 				4F23BF912131F91400C953F7 /* UIColor+Extensions.swift */,
+				4F7EE3D521336D650066E365 /* UIScrollView+Alignment.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,6 +283,22 @@
 				4FB8D7D92124DC96003B2908 /* RandomNumberGenerator.swift */,
 			);
 			path = Random;
+			sourceTree = "<group>";
+		};
+		4FD7E82F2132E5E6009CBB44 /* Wordlists */ = {
+			isa = PBXGroup;
+			children = (
+				4FD7E8302132E5E6009CBB44 /* chinese_traditional.txt */,
+				4FD7E8312132E5E6009CBB44 /* japanese.txt */,
+				4FD7E8322132E5E6009CBB44 /* french.txt */,
+				4FD7E8332132E5E6009CBB44 /* Wordlists.xcassets */,
+				4FD7E8342132E5E6009CBB44 /* chinese_simplified.txt */,
+				4FD7E8352132E5E6009CBB44 /* english.txt */,
+				4FD7E8362132E5E6009CBB44 /* spanish.txt */,
+				4FD7E8372132E5E6009CBB44 /* italian.txt */,
+				4FD7E8382132E5E6009CBB44 /* korean.txt */,
+			);
+			path = Wordlists;
 			sourceTree = "<group>";
 		};
 		4FE8822A2124D89200027D74 /* Managers */ = {
@@ -372,8 +425,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD7E83B2132E5E7009CBB44 /* french.txt in Resources */,
+				4FD7E8392132E5E7009CBB44 /* chinese_traditional.txt in Resources */,
+				4FD7E83A2132E5E7009CBB44 /* japanese.txt in Resources */,
+				4FD7E83E2132E5E7009CBB44 /* english.txt in Resources */,
+				4FD7E83F2132E5E7009CBB44 /* spanish.txt in Resources */,
 				4F3865F82123AAF8006C302C /* LaunchScreen.storyboard in Resources */,
+				4FD7E83D2132E5E7009CBB44 /* chinese_simplified.txt in Resources */,
+				4FD7E8412132E5E7009CBB44 /* korean.txt in Resources */,
 				4F3865F52123AAF8006C302C /* Assets.xcassets in Resources */,
+				4FD7E83C2132E5E7009CBB44 /* Wordlists.xcassets in Resources */,
+				4FD7E8402132E5E7009CBB44 /* italian.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,9 +493,12 @@
 				4F664AF82130B63B00B86FD0 /* Data+Hex.swift in Sources */,
 				4F3866252123B147006C302C /* BalanceViewController.swift in Sources */,
 				4F23BF922131F91400C953F7 /* UIColor+Extensions.swift in Sources */,
+				4FD7E8432132F1FF009CBB44 /* MnemonicWordView.swift in Sources */,
 				4F664AF62130B60C00B86FD0 /* Binary.swift in Sources */,
+				4F7EE3D621336D650066E365 /* UIScrollView+Alignment.swift in Sources */,
 				4FFDC4C5213229CE00BE7B8F /* NewWalletController.swift in Sources */,
 				4F23BF862131D21B00C953F7 /* WelcomeViewController.swift in Sources */,
+				4FD7E82E2132DA77009CBB44 /* Sizes.swift in Sources */,
 				4F3866272123B274006C302C /* TabBarController.swift in Sources */,
 				4FB8D7D32124DB1F003B2908 /* Mnemonic.swift in Sources */,
 				4F3866202123ADDB006C302C /* Colors.swift in Sources */,
@@ -441,9 +506,12 @@
 				4FFDC4C721322C4300BE7B8F /* Appearance.swift in Sources */,
 				4F23BF8C2131F6B000C953F7 /* NanuraiButton.swift in Sources */,
 				4F3865EB2123AAF7006C302C /* AppDelegate.swift in Sources */,
+				4FD7E84521331342009CBB44 /* ConfirmMnemonicViewController.swift in Sources */,
 				4FB8D7DA2124DC96003B2908 /* RandomNumberGenerator.swift in Sources */,
+				4F7EE3D8213379090066E365 /* NanuraiTextField.swift in Sources */,
 				4FB8D7DC2124DCDC003B2908 /* WordList.swift in Sources */,
 				4FFDC4C921322D9400BE7B8F /* NanuraiNavigationController.swift in Sources */,
+				4FD7E82C2132D8CD009CBB44 /* MnemonicPhraseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

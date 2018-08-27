@@ -44,8 +44,8 @@ struct WordList {
   }
   
   func words(at indexes: [Int]) throws -> [String] {
-    let bundle = Bundle(identifier: "com.elliottminns.CoinKit")
-    guard let path = bundle?.url(forResource: filename, withExtension: "txt") else {
+    let bundle = Bundle.main
+    guard let path = bundle.url(forResource: filename, withExtension: "txt") else {
       throw WordListError.notFound
     }
     

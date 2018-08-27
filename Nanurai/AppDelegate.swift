@@ -21,17 +21,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Appearance.setup()
 
     let controllers: [UIViewController] = [
-      UINavigationController(rootViewController: BalanceViewController())
+      NanuraiNavigationController(rootViewController: BalanceViewController())
     ]
 
     let tab = TabBarController(controllers: controllers)
     window?.rootViewController = tab
     window?.makeKeyAndVisible()
     
+    let mnemonic = Mnemonic(words: "ice hazard main smooth device bless caution gaze brother august logic nest helmet mango antenna poem climb subway test cage repeat garage seminar culture".components(separatedBy: " "))
     if !KeyManager.shared.hasKeys {
-      let welcome = WelcomeViewController()
-      let navigation = NanuraiNavigationController(rootViewController: welcome)
-      tab.present(navigation, animated: false, completion: nil)
+//      let welcome = WelcomeViewController()
+//      let navigation = NanuraiNavigationController(rootViewController: welcome)
+      let c = ConfirmMnemonicViewController(mnemonic: mnemonic)
+      let navigation = NanuraiNavigationController(rootViewController: c)
+      //tab.present(navigation, animated: false, completion: nil)
     }
     
     return true

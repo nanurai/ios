@@ -24,12 +24,12 @@ class NewWalletController: NanuraiViewController {
     
     view.sv(
       scroll.sv(
-        descriptionLabel,
-        understandButton
-      )
+        descriptionLabel
+      ),
+      understandButton
     )
     
-    scroll.followEdges(view)
+    scroll.top(0).left(0).right(0)
     descriptionLabel.textColor = StyleGuide.Color.white
     descriptionLabel.numberOfLines = 0
     descriptionLabel.textAlignment = .justified
@@ -44,19 +44,20 @@ class NewWalletController: NanuraiViewController {
     
   Do not show this seed to anyone.
     
-  If you lose this phrase you will not be able to access your Nano, no one \
-  not even Nanurai can recover your funds for you.
+  If you lose this phrase you will not be able to access your Nano.
+    
+  Noone, including Nanurai, can recover your funds for you.
   """
     
-    let margin: CGFloat = 25
+    let margin: CGFloat = StyleGuide.Size.margin
     descriptionLabel.Width == view.Width - margin * 2
     descriptionLabel.left(margin).right(margin)
     descriptionLabel.font = UIFont.systemFont(ofSize: 22)
     
     understandButton.setAttributedTitle("I Understand")
-    understandButton.left(margin).right(margin)
-    understandButton.Top == descriptionLabel.Bottom + 25
-    understandButton.height(54)
+    understandButton.left(margin).right(margin).bottom(margin)
+    understandButton.Top == scroll.Bottom + margin
+    understandButton.height(StyleGuide.Size.Button.height)
     understandButton.addTarget(
       self, action: #selector(understandPressed), for: .touchUpInside
     )
@@ -69,5 +70,12 @@ class NewWalletController: NanuraiViewController {
   
   @objc
   func understandPressed() {
+    do {
+      let mnemonic = try Mnemonic()
+      let controller = MnemonicPhraseViewController(mnemonic: mnemonic)
+      navigationController?.pushViewController(controller, animated: true)
+    } catch (let error) {
+      print(error)
+    }
   }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Stevia
 
 extension UIButton {
   
@@ -29,4 +30,7 @@ extension UIButton {
     self.setAttributedTitle(attributedString, for: .normal)
   }
   
+  func defaultHeight() {
+    self.height(StyleGuide.Size.Button.height)
+  }
 }

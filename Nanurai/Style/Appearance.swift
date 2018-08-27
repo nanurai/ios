@@ -19,4 +19,8 @@ struct Appearance {
     UINavigationBar.appearance().tintColor = StyleGuide.Color.white
   }
   
+  static func setupTabBar() {
+
+  }
+  
 }

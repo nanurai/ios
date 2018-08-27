@@ -8,20 +8,10 @@
 
 import UIKit
 
-class BalanceViewController: UIViewController {
-  
-  init() {
-    super.init(nibName: nil, bundle: nil)
-    render()
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-  
-  func render() {
+class BalanceViewController: NanuraiViewController {
+  override func render() {
+    super.render()
     title = "Balances"
     tabBarItem.image = #imageLiteral(resourceName: "pie-chart")
-    view.backgroundColor = UIColor.white
   }
 }

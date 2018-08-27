@@ -18,7 +18,12 @@ final class NanuraiButton: UIButton {
     }
     
     var backgroundColor: UIColor {
-      return StyleGuide.Color.darkblue
+      switch self {
+      case .danger:
+        return StyleGuide.Color.red
+      default:
+        return StyleGuide.Color.darkblue
+      }
     }
   }
   
@@ -32,7 +37,7 @@ final class NanuraiButton: UIButton {
   init(withType type: ButtonType) {
     super.init(frame: .zero)
     
-    layer.cornerRadius = 3
+    layer.cornerRadius = StyleGuide.Size.Button.radius
     clipsToBounds = true
     
     titleLabel?.textColor = type.textColor
@@ -50,7 +55,6 @@ final class NanuraiButton: UIButton {
   func setAttributedTitle(_ title: String?, withKerning kern: Double = 1.2) {
     guard let title = title else { return }
     let text = NSAttributedString(string: title, attributes: [.kern: kern])
-    
     super.setAttributedTitle(text, for: .normal)
   }
   

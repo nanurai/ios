@@ -37,15 +37,16 @@ class WelcomeViewController: NanuraiViewController  {
     label.centerHorizontally()
     label.font = StyleGuide.Font.title()
    
-    label.CenterY == view.CenterY
-    imageView.Bottom == label.Top - 25
+    let buttonHeight: CGFloat = StyleGuide.Size.Button.height
+    let margin = StyleGuide.Size.margin
     
-    let buttonHeight: CGFloat = 54
+    label.CenterY == view.CenterY
+    imageView.Bottom == label.Top - margin
 
     newButton.centerHorizontally()
     newButton.height(buttonHeight)
-    newButton.left(25).right(25)
-    newButton.Top == label.Bottom + 50
+    newButton.left(margin).right(margin)
+    newButton.Top == label.Bottom + margin * 2
     newButton.setAttributedTitle("Create new Wallet")
     newButton.addTarget(
       self, action: #selector(newWalletPressed), for: .touchUpInside
@@ -53,8 +54,8 @@ class WelcomeViewController: NanuraiViewController  {
 
     restoreButton.centerHorizontally()
     restoreButton.height(buttonHeight)
-    restoreButton.left(25).right(25)
-    restoreButton.Top == newButton.Bottom + 25
+    restoreButton.left(margin).right(margin)
+    restoreButton.Top == newButton.Bottom + margin
     restoreButton.setAttributedTitle("Restore Wallet")
     restoreButton.addTarget(
       self, action: #selector(restorePressed), for: .touchUpInside
