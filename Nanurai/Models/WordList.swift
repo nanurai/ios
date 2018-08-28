@@ -43,18 +43,31 @@ struct WordList {
     self.filename = filename
   }
   
-  func words(at indexes: [Int]) throws -> [String] {
+  fileprivate func list() throws -> [String] {
     let bundle = Bundle.main
     guard let path = bundle.url(forResource: filename, withExtension: "txt") else {
       throw WordListError.notFound
     }
     
     let data = try Data(contentsOf: path)
-    guard let words = String(data:data, encoding: .utf8)?.split(separator: "\n") else {
+    guard let list = String(data:data, encoding: .utf8)?.split(separator: "\n") else {
       throw WordListError.notFound
     }
+    return list.map { String($0) }
+  }
+  
+  func words(at indexes: [Int]) throws -> [String] {
+    let words = try list()
     return indexes.map { (index) -> String in
       return String(words[index])
+    }
+  }
+  
+  func index(of words: [String]) throws -> [Int] {
+    let list = try self.list()
+    return try words.map { word -> Int in
+      guard let i = list.index(of: word) else { throw WordListError.notFound }
+      return i
     }
   }
 }

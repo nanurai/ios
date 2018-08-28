@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4F23BF862131D21B00C953F7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23BF852131D21B00C953F7 /* WelcomeViewController.swift */; };
 		4F23BF882131DA1300C953F7 /* NanuraiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23BF872131DA1300C953F7 /* NanuraiViewController.swift */; };
-		4F23BF8A2131E32500C953F7 /* Stevia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F23BF892131E32500C953F7 /* Stevia.framework */; };
 		4F23BF8C2131F6B000C953F7 /* NanuraiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23BF8B2131F6B000C953F7 /* NanuraiButton.swift */; };
 		4F23BF8E2131F7D400C953F7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23BF8D2131F7D400C953F7 /* Fonts.swift */; };
 		4F23BF902131F8E700C953F7 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F23BF8F2131F8E700C953F7 /* UIButton+Style.swift */; };
@@ -23,13 +22,31 @@
 		4F3866232123AEA5006C302C /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3866222123AEA5006C302C /* UIColor+Hex.swift */; };
 		4F3866252123B147006C302C /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3866242123B147006C302C /* BalanceViewController.swift */; };
 		4F3866272123B274006C302C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3866262123B274006C302C /* TabBarController.swift */; };
+		4F464BC82134783100FCFD8A /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F464BC72134783100FCFD8A /* KeychainAccess.framework */; };
+		4F464BCA2134785E00FCFD8A /* SipHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F464BC92134785E00FCFD8A /* SipHash.framework */; };
+		4F464BCC21349C1800FCFD8A /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F464BCB21349C1800FCFD8A /* AccountManager.swift */; };
+		4F464BCE2134A4E600FCFD8A /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F464BCD2134A4E600FCFD8A /* AccountStore.swift */; };
+		4F464BD22134D76D00FCFD8A /* CoreStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F464BD12134D76D00FCFD8A /* CoreStore.framework */; };
+		4F464BD42134D7C300FCFD8A /* BlockStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F464BD32134D7C300FCFD8A /* BlockStore.swift */; };
+		4F464BD721354B4400FCFD8A /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F464BD621354B4400FCFD8A /* Sodium.framework */; };
+		4F464BD921359F4000FCFD8A /* Data+Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F464BD821359F4000FCFD8A /* Data+Base32.swift */; };
+		4F464BDC2135AC4900FCFD8A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F464BDB2135AC4900FCFD8A /* Utilities.swift */; };
+		4F464BDF2135C1BA00FCFD8A /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F464BDE2135C1BA00FCFD8A /* Database.swift */; };
+		4F464BE12135C35400FCFD8A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F464BE02135C35400FCFD8A /* LoadingViewController.swift */; };
+		4F464BE32135C47000FCFD8A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F464BE22135C47000FCFD8A /* Result.swift */; };
+		4F464BE52135C87800FCFD8A /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F464BE42135C87800FCFD8A /* Account.swift */; };
 		4F664AF62130B60C00B86FD0 /* Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F664AF52130B60C00B86FD0 /* Binary.swift */; };
 		4F664AF82130B63B00B86FD0 /* Data+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F664AF72130B63B00B86FD0 /* Data+Hex.swift */; };
-		4F664AFB2130C4A700B86FD0 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F664AF92130C4A700B86FD0 /* CommonCrypto.framework */; };
-		4F664AFC2130C4A700B86FD0 /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F664AFA2130C4A700B86FD0 /* Crypto.framework */; };
 		4F7EE3D621336D650066E365 /* UIScrollView+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7EE3D521336D650066E365 /* UIScrollView+Alignment.swift */; };
 		4F7EE3D8213379090066E365 /* NanuraiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7EE3D7213379090066E365 /* NanuraiTextField.swift */; };
-		4FB8D7D02124D8F8003B2908 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB8D7CF2124D8F8003B2908 /* KeychainAccess.framework */; };
+		4FB093AE2134706C00FDFA0A /* KeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB093AD2134706C00FDFA0A /* KeyPair.swift */; };
+		4FB093B02134723D00FDFA0A /* Data+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB093AF2134723D00FDFA0A /* Data+Bytes.swift */; };
+		4FB093C3213476E900FDFA0A /* Stevia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB093BF213476E900FDFA0A /* Stevia.framework */; };
+		4FB093C4213476E900FDFA0A /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB093C0213476E900FDFA0A /* CommonCrypto.framework */; };
+		4FB093C5213476E900FDFA0A /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB093C1213476E900FDFA0A /* Crypto.framework */; };
+		4FB093C6213476E900FDFA0A /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB093C2213476E900FDFA0A /* BigInt.framework */; };
+		4FB093C82134770000FDFA0A /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB093C72134770000FDFA0A /* secp256k1.framework */; };
+		4FB093CC213477C800FDFA0A /* Data+Append.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB093CB213477C800FDFA0A /* Data+Append.swift */; };
 		4FB8D7D32124DB1F003B2908 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8D7D22124DB1F003B2908 /* Mnemonic.swift */; };
 		4FB8D7D72124DC02003B2908 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8D7D62124DC02003B2908 /* String+Hex.swift */; };
 		4FB8D7DA2124DC96003B2908 /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8D7D92124DC96003B2908 /* RandomNumberGenerator.swift */; };
@@ -73,7 +90,6 @@
 /* Begin PBXFileReference section */
 		4F23BF852131D21B00C953F7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4F23BF872131DA1300C953F7 /* NanuraiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanuraiViewController.swift; sourceTree = "<group>"; };
-		4F23BF892131E32500C953F7 /* Stevia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stevia.framework; path = Carthage/Build/iOS/Stevia.framework; sourceTree = "<group>"; };
 		4F23BF8B2131F6B000C953F7 /* NanuraiButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanuraiButton.swift; sourceTree = "<group>"; };
 		4F23BF8D2131F7D400C953F7 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		4F23BF8F2131F8E700C953F7 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
@@ -93,13 +109,31 @@
 		4F3866222123AEA5006C302C /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		4F3866242123B147006C302C /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		4F3866262123B274006C302C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4F464BC72134783100FCFD8A /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		4F464BC92134785E00FCFD8A /* SipHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SipHash.framework; path = Carthage/Build/iOS/SipHash.framework; sourceTree = "<group>"; };
+		4F464BCB21349C1800FCFD8A /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		4F464BCD2134A4E600FCFD8A /* AccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
+		4F464BD12134D76D00FCFD8A /* CoreStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreStore.framework; path = Carthage/Build/iOS/CoreStore.framework; sourceTree = "<group>"; };
+		4F464BD32134D7C300FCFD8A /* BlockStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockStore.swift; sourceTree = "<group>"; };
+		4F464BD621354B4400FCFD8A /* Sodium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sodium.framework; path = Carthage/Build/iOS/Sodium.framework; sourceTree = "<group>"; };
+		4F464BD821359F4000FCFD8A /* Data+Base32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Base32.swift"; sourceTree = "<group>"; };
+		4F464BDB2135AC4900FCFD8A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		4F464BDE2135C1BA00FCFD8A /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		4F464BE02135C35400FCFD8A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		4F464BE22135C47000FCFD8A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4F464BE42135C87800FCFD8A /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		4F664AF52130B60C00B86FD0 /* Binary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binary.swift; sourceTree = "<group>"; };
 		4F664AF72130B63B00B86FD0 /* Data+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Hex.swift"; sourceTree = "<group>"; };
-		4F664AF92130C4A700B86FD0 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
-		4F664AFA2130C4A700B86FD0 /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
 		4F7EE3D521336D650066E365 /* UIScrollView+Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Alignment.swift"; sourceTree = "<group>"; };
 		4F7EE3D7213379090066E365 /* NanuraiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanuraiTextField.swift; sourceTree = "<group>"; };
-		4FB8D7CF2124D8F8003B2908 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		4FB093AD2134706C00FDFA0A /* KeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPair.swift; sourceTree = "<group>"; };
+		4FB093AF2134723D00FDFA0A /* Data+Bytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Bytes.swift"; sourceTree = "<group>"; };
+		4FB093BF213476E900FDFA0A /* Stevia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stevia.framework; path = Carthage/Build/iOS/Stevia.framework; sourceTree = "<group>"; };
+		4FB093C0213476E900FDFA0A /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		4FB093C1213476E900FDFA0A /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
+		4FB093C2213476E900FDFA0A /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BigInt.framework; path = Carthage/Build/iOS/BigInt.framework; sourceTree = "<group>"; };
+		4FB093C72134770000FDFA0A /* secp256k1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = secp256k1.framework; sourceTree = "<group>"; };
+		4FB093CB213477C800FDFA0A /* Data+Append.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Append.swift"; sourceTree = "<group>"; };
 		4FB8D7D22124DB1F003B2908 /* Mnemonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
 		4FB8D7D62124DC02003B2908 /* String+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hex.swift"; sourceTree = "<group>"; };
 		4FB8D7D92124DC96003B2908 /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
@@ -128,10 +162,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F23BF8A2131E32500C953F7 /* Stevia.framework in Frameworks */,
-				4F664AFC2130C4A700B86FD0 /* Crypto.framework in Frameworks */,
-				4F664AFB2130C4A700B86FD0 /* CommonCrypto.framework in Frameworks */,
-				4FB8D7D02124D8F8003B2908 /* KeychainAccess.framework in Frameworks */,
+				4F464BCA2134785E00FCFD8A /* SipHash.framework in Frameworks */,
+				4F464BC82134783100FCFD8A /* KeychainAccess.framework in Frameworks */,
+				4FB093C5213476E900FDFA0A /* Crypto.framework in Frameworks */,
+				4FB093C82134770000FDFA0A /* secp256k1.framework in Frameworks */,
+				4F464BD721354B4400FCFD8A /* Sodium.framework in Frameworks */,
+				4FB093C6213476E900FDFA0A /* BigInt.framework in Frameworks */,
+				4F464BD22134D76D00FCFD8A /* CoreStore.framework in Frameworks */,
+				4FB093C4213476E900FDFA0A /* CommonCrypto.framework in Frameworks */,
+				4FB093C3213476E900FDFA0A /* Stevia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +205,7 @@
 		4F3865DE2123AAF7006C302C = {
 			isa = PBXGroup;
 			children = (
+				4FB093BE2134765B00FDFA0A /* Vendor */,
 				4F3865E92123AAF7006C302C /* Nanurai */,
 				4F3866012123AAF8006C302C /* NanuraiTests */,
 				4F38660C2123AAF8006C302C /* NanuraiUITests */,
@@ -187,6 +227,8 @@
 		4F3865E92123AAF7006C302C /* Nanurai */ = {
 			isa = PBXGroup;
 			children = (
+				4F464BDD2135C1AF00FCFD8A /* Database */,
+				4F464BDA2135AC4100FCFD8A /* Utilities */,
 				4FD7E82F2132E5E6009CBB44 /* Wordlists */,
 				4FB8D7D82124DC85003B2908 /* Random */,
 				4FE8822A2124D89200027D74 /* Managers */,
@@ -224,9 +266,13 @@
 		4F38661B2123AB0D006C302C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4F464BD52134D7C700FCFD8A /* Stores */,
 				4FB8D7D22124DB1F003B2908 /* Mnemonic.swift */,
 				4FB8D7DB2124DCDC003B2908 /* WordList.swift */,
 				4F664AF52130B60C00B86FD0 /* Binary.swift */,
+				4FB093AD2134706C00FDFA0A /* KeyPair.swift */,
+				4F464BE22135C47000FCFD8A /* Result.swift */,
+				4F464BE42135C87800FCFD8A /* Account.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,6 +295,7 @@
 				4F3866262123B274006C302C /* TabBarController.swift */,
 				4F23BF872131DA1300C953F7 /* NanuraiViewController.swift */,
 				4FFDC4C821322D9400BE7B8F /* NanuraiNavigationController.swift */,
+				4F464BE02135C35400FCFD8A /* LoadingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -273,8 +320,44 @@
 				4F23BF8F2131F8E700C953F7 /* UIButton+Style.swift */,
 				4F23BF912131F91400C953F7 /* UIColor+Extensions.swift */,
 				4F7EE3D521336D650066E365 /* UIScrollView+Alignment.swift */,
+				4FB093AF2134723D00FDFA0A /* Data+Bytes.swift */,
+				4FB093CB213477C800FDFA0A /* Data+Append.swift */,
+				4F464BD821359F4000FCFD8A /* Data+Base32.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4F464BD52134D7C700FCFD8A /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				4F464BCD2134A4E600FCFD8A /* AccountStore.swift */,
+				4F464BD32134D7C300FCFD8A /* BlockStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		4F464BDA2135AC4100FCFD8A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4F464BDB2135AC4900FCFD8A /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4F464BDD2135C1AF00FCFD8A /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				4F464BDE2135C1BA00FCFD8A /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		4FB093BE2134765B00FDFA0A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				4FB093C72134770000FDFA0A /* secp256k1.framework */,
+			);
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 		4FB8D7D82124DC85003B2908 /* Random */ = {
@@ -305,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				4FE8822B2124D89200027D74 /* KeyManager.swift */,
+				4F464BCB21349C1800FCFD8A /* AccountManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -312,10 +396,14 @@
 		4FE8822D2124D8A900027D74 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4F23BF892131E32500C953F7 /* Stevia.framework */,
-				4F664AF92130C4A700B86FD0 /* CommonCrypto.framework */,
-				4F664AFA2130C4A700B86FD0 /* Crypto.framework */,
-				4FB8D7CF2124D8F8003B2908 /* KeychainAccess.framework */,
+				4F464BD621354B4400FCFD8A /* Sodium.framework */,
+				4F464BD12134D76D00FCFD8A /* CoreStore.framework */,
+				4F464BC92134785E00FCFD8A /* SipHash.framework */,
+				4F464BC72134783100FCFD8A /* KeychainAccess.framework */,
+				4FB093C2213476E900FDFA0A /* BigInt.framework */,
+				4FB093C0213476E900FDFA0A /* CommonCrypto.framework */,
+				4FB093C1213476E900FDFA0A /* Crypto.framework */,
+				4FB093BF213476E900FDFA0A /* Stevia.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -466,6 +554,10 @@
 				"$(SRCROOT)/Carthage/Build/iOS/CommonCrypto.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Crypto.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Stevia.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BigInt.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SipHash.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CoreStore.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Sodium.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -473,6 +565,10 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CommonCrypto.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Crypto.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Stevia.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BigInt.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SipHash.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CoreStore.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Sodium.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -487,30 +583,42 @@
 			files = (
 				4F23BF8E2131F7D400C953F7 /* Fonts.swift in Sources */,
 				4F3866232123AEA5006C302C /* UIColor+Hex.swift in Sources */,
+				4F464BE32135C47000FCFD8A /* Result.swift in Sources */,
 				4FE8822C2124D89300027D74 /* KeyManager.swift in Sources */,
 				4FB8D7D72124DC02003B2908 /* String+Hex.swift in Sources */,
 				4F23BF882131DA1300C953F7 /* NanuraiViewController.swift in Sources */,
+				4F464BD921359F4000FCFD8A /* Data+Base32.swift in Sources */,
+				4F464BDF2135C1BA00FCFD8A /* Database.swift in Sources */,
 				4F664AF82130B63B00B86FD0 /* Data+Hex.swift in Sources */,
 				4F3866252123B147006C302C /* BalanceViewController.swift in Sources */,
+				4F464BE12135C35400FCFD8A /* LoadingViewController.swift in Sources */,
 				4F23BF922131F91400C953F7 /* UIColor+Extensions.swift in Sources */,
+				4FB093CC213477C800FDFA0A /* Data+Append.swift in Sources */,
 				4FD7E8432132F1FF009CBB44 /* MnemonicWordView.swift in Sources */,
+				4F464BE52135C87800FCFD8A /* Account.swift in Sources */,
 				4F664AF62130B60C00B86FD0 /* Binary.swift in Sources */,
 				4F7EE3D621336D650066E365 /* UIScrollView+Alignment.swift in Sources */,
 				4FFDC4C5213229CE00BE7B8F /* NewWalletController.swift in Sources */,
 				4F23BF862131D21B00C953F7 /* WelcomeViewController.swift in Sources */,
+				4FB093B02134723D00FDFA0A /* Data+Bytes.swift in Sources */,
 				4FD7E82E2132DA77009CBB44 /* Sizes.swift in Sources */,
 				4F3866272123B274006C302C /* TabBarController.swift in Sources */,
 				4FB8D7D32124DB1F003B2908 /* Mnemonic.swift in Sources */,
 				4F3866202123ADDB006C302C /* Colors.swift in Sources */,
 				4F23BF902131F8E700C953F7 /* UIButton+Style.swift in Sources */,
 				4FFDC4C721322C4300BE7B8F /* Appearance.swift in Sources */,
+				4F464BCE2134A4E600FCFD8A /* AccountStore.swift in Sources */,
+				4F464BDC2135AC4900FCFD8A /* Utilities.swift in Sources */,
 				4F23BF8C2131F6B000C953F7 /* NanuraiButton.swift in Sources */,
 				4F3865EB2123AAF7006C302C /* AppDelegate.swift in Sources */,
 				4FD7E84521331342009CBB44 /* ConfirmMnemonicViewController.swift in Sources */,
 				4FB8D7DA2124DC96003B2908 /* RandomNumberGenerator.swift in Sources */,
 				4F7EE3D8213379090066E365 /* NanuraiTextField.swift in Sources */,
+				4F464BD42134D7C300FCFD8A /* BlockStore.swift in Sources */,
 				4FB8D7DC2124DCDC003B2908 /* WordList.swift in Sources */,
 				4FFDC4C921322D9400BE7B8F /* NanuraiNavigationController.swift in Sources */,
+				4F464BCC21349C1800FCFD8A /* AccountManager.swift in Sources */,
+				4FB093AE2134706C00FDFA0A /* KeyPair.swift in Sources */,
 				4FD7E82C2132D8CD009CBB44 /* MnemonicPhraseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,6 +789,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Vendor",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Nanurai/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -689,6 +798,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliottminns.Nanurai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Nanurai/Secp256k1";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -703,6 +813,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Vendor",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Nanurai/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -711,6 +822,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliottminns.Nanurai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Nanurai/Secp256k1";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

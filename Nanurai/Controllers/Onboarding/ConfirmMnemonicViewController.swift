@@ -188,13 +188,18 @@ class ConfirmMnemonicViewController: NanuraiViewController {
   }
   
   @objc
-  func nextButtonPressed(sender: UIButton) {
+  func nextButtonPressed(sender: NanuraiButton) {
     guard expected == input.text?.lowercased() else { return }
     if currentChallenge < challenges.count - 1 {
       currentChallenge += 1
     } else {
-      input.resignFirstResponder()
-      navigationController?.dismiss(animated: true, completion: nil)
+      nextButton.isEnabled = false
+      KeyManager.shared.store(mnemonic: mnemonic)
+      sender.isLoading = true
+      AccountManager.shared.initial(loadFrom: mnemonic) {
+        self.input.resignFirstResponder()
+        self.navigationController?.dismiss(animated: true, completion: nil)
+      }
     }
   }
 }

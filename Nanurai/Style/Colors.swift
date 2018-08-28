@@ -17,6 +17,7 @@ struct Color {
   static let blue: UIColor = UIColor(hex: "0E83C1")
   static let darkblue: UIColor = UIColor(hex: "145374")
   static let red: UIColor = UIColor(hex: "81242A")
+  static let lightred: UIColor = UIColor(hex: "ad3039")
   static let darkred: UIColor = UIColor(hex: "3B0D0D")
   static let lowlight: UIColor = UIColor(hex: "2A0925")
   static let teritiary: UIColor = UIColor(hex: "9B9987")

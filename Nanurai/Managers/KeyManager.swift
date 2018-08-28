@@ -21,11 +21,6 @@ class KeyManager {
   let pubKeychain = Keychain(service: "org.nanurai.keychain.public")
     .accessibility(.whenUnlockedThisDeviceOnly)
   
-  func accountPath(at index: Int) -> String {
-    let base: String = "m/44'/165'"
-    return "\(base)/\(index)'"
-  }
-  
   var hasKeys: Bool {
     return (try? pubKeychain.get("has-mnemonic-phrase") != nil) ?? false
   }
@@ -34,19 +29,14 @@ class KeyManager {
   }
   
   func store(mnemonic: Mnemonic) {
-    /*
-    let seed = mnemonic.seedHex()
     do {
-      let node = try HDNode(seedHex: seed, network: NetworkType.friendshipcoin)
-      let account = try node.derive(path: accountPath(at: 0))
+      let seed = mnemonic.seedHex()
       try privKeychain.set(seed, key: "seed")
-      try privKeychain.set(mnemonic.formatted, key: "words")
-      try pubKeychain.set(account.toBase58(isPrivate: false), key: base)
+      try privKeychain.set(mnemonic.formatted, key: "mnemonic")
       try pubKeychain.set("true", key: "has-mnemonic-phrase")
     } catch let error {
       print(error)
     }
-     */
   }
   /*
   func keyPair(for account: Account, address: Int) throws -> ECPair {
@@ -61,15 +51,6 @@ class KeyManager {
   func nuke() throws {
     try privKeychain.remove("seed")
     try privKeychain.remove("words")
-    try pubKeychain.remove("m/44'/0'/0'")
     try pubKeychain.remove("has-mnemonic-phrase")
-  }
-  
-  func getPublicBase58(account: Int) throws -> String {
-    guard let acc = try pubKeychain.get("m/44'/0'/\(account)'") else {
-      throw KeyManagerError.notFound
-    }
-    
-    return acc
   }
 }

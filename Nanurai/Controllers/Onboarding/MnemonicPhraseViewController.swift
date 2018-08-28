@@ -17,7 +17,16 @@ class MnemonicPhraseViewController: NanuraiViewController {
   
   let mnemonic: Mnemonic
   
-  fileprivate var currentIndex: Int = 0
+  fileprivate var currentIndex: Int = 0 {
+    didSet {
+      let width = scrollView.frame.width
+      let next = width * CGFloat(currentIndex)
+      let offset = CGPoint(x: next, y: scrollView.contentOffset.y)
+      scrollView.setContentOffset(offset, animated: true)
+      
+      
+    }
+  }
   
   init(mnemonic: Mnemonic) {
     self.mnemonic = mnemonic
@@ -34,15 +43,15 @@ class MnemonicPhraseViewController: NanuraiViewController {
     let margin: CGFloat = 25
     view.sv(scrollView, nextButton)
     
-    scrollView.isUserInteractionEnabled = false
-    scrollView.left(0).right(0).top(0)
-    scrollView.delegate = self
-
     nextButton.defaultHeight()
     nextButton.left(margin).right(margin).bottom(margin)
-    nextButton.Top == scrollView.Bottom + margin
     nextButton.setAttributedTitle("Next Word")
     nextButton.addTarget(self, action: #selector(nextButtonPressed), for: UIControlEvents.touchUpInside)
+    
+    scrollView.isUserInteractionEnabled = false
+    scrollView.left(0).right(0).top(0)
+    scrollView.Bottom == nextButton.Top + margin
+    scrollView.delegate = self
     
     let width = UIScreen.main.bounds.size.width
     let height = UIScreen.main.bounds.size.height - (margin * 2 + StyleGuide.Size.Button.height)
@@ -57,19 +66,25 @@ class MnemonicPhraseViewController: NanuraiViewController {
     scrollView.pageAlign(views: views)
   }
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    let item = UIBarButtonItem(
+      title: "Restart", style: .plain, target: self, action: #selector(restartPressed)
+    )
+    item.tintColor = StyleGuide.Color.lightred
+    navigationItem.leftBarButtonItem = item
+  }
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    navigationController?.setNavigationBarHidden(true, animated: animated)
+    navigationItem.setHidesBackButton(true, animated: animated)
   }
   
   @objc
   func nextButtonPressed() {
     if currentIndex < mnemonic.words.count - 1 {
       currentIndex += 1
-      let width = scrollView.frame.width
-      let next = width * CGFloat(currentIndex)
-      let offset = CGPoint(x: next, y: scrollView.contentOffset.y)
-      scrollView.setContentOffset(offset, animated: true)
     } else {
       let alert = UIAlertController(
         title: "Are you ready?",
@@ -87,7 +102,13 @@ class MnemonicPhraseViewController: NanuraiViewController {
           )
         })
       )
+      present(alert, animated: true, completion: nil)
     }
+  }
+  
+  @objc
+  func restartPressed() {
+    self.currentIndex = 0
   }
 }
 
@@ -95,6 +116,8 @@ extension MnemonicPhraseViewController: UIScrollViewDelegate {
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     if currentIndex == mnemonic.words.count - 1 {
       nextButton.setAttributedTitle("Confirm")
+    } else {
+      nextButton.setAttributedTitle("Next Word")
     }
   }
 }

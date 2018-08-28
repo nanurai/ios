@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Stevia
 
 final class NanuraiButton: UIButton {
  
@@ -34,6 +35,24 @@ final class NanuraiButton: UIButton {
     }
   }
   
+  var title: NSAttributedString?
+  let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+  
+  var isLoading: Bool = false {
+    didSet {
+      guard oldValue != isLoading else { return }
+      
+      if isLoading {
+        title = attributedTitle(for: .normal)
+        setAttributedTitle("")
+        activityIndicator.startAnimating()
+      } else {
+        setAttributedTitle(title, for: .normal)
+        activityIndicator.stopAnimating()
+      }
+    }
+  }
+  
   init(withType type: ButtonType) {
     super.init(frame: .zero)
     
@@ -45,7 +64,9 @@ final class NanuraiButton: UIButton {
 
     setBackgroundColor(color: type.backgroundColor, forState: .normal)
     setBackgroundColor(color: type.backgroundColor.darkerColor(percent: 0.2), forState: .highlighted)
-    
+    activityIndicator.hidesWhenStopped = true
+    sv(activityIndicator)
+    activityIndicator.centerInContainer()
   }
   
   required init?(coder aDecoder: NSCoder) {

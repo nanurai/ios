@@ -26,6 +26,7 @@ class NanuraiNavigationController: UINavigationController {
   
   func setup() {
     navigationBar.titleTextAttributes = [.foregroundColor: StyleGuide.Color.white]
+    navigationBar.isTranslucent = false
   }
   
   override var preferredStatusBarStyle: UIStatusBarStyle {

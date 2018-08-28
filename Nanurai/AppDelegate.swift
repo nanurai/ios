@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreData
+import CoreStore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,23 +20,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     Appearance.setup()
 
+    window?.rootViewController = LoadingViewController()
+    window?.makeKeyAndVisible()
+
     let controllers: [UIViewController] = [
       NanuraiNavigationController(rootViewController: BalanceViewController())
     ]
+    
+    Database.shared.load { result in
+      switch result {
+      case .success(_):
+        print("Successfully added store")
+      case .failure(let error):
+        print("Failed adding sqlite store with error: \(error)")
+      }
+      guard let window = self.window else { return }
+      
+      let tab = TabBarController(controllers: controllers)
+      
+      let snapshot = window.snapshotView(afterScreenUpdates: false) ?? UIView()
+      tab.view.addSubview(snapshot)
+      snapshot.left(0).right(0).top(0).bottom(0)
+      window.rootViewController = tab
+      
+      if !KeyManager.shared.hasKeys {
+        let welcome = WelcomeViewController()
+        let navigation = NanuraiNavigationController(rootViewController: welcome)
+        tab.present(navigation, animated: false, completion: nil)
+      }
 
-    let tab = TabBarController(controllers: controllers)
-    window?.rootViewController = tab
-    window?.makeKeyAndVisible()
-    
-    let mnemonic = Mnemonic(words: "ice hazard main smooth device bless caution gaze brother august logic nest helmet mango antenna poem climb subway test cage repeat garage seminar culture".components(separatedBy: " "))
-    if !KeyManager.shared.hasKeys {
-//      let welcome = WelcomeViewController()
-//      let navigation = NanuraiNavigationController(rootViewController: welcome)
-      let c = ConfirmMnemonicViewController(mnemonic: mnemonic)
-      let navigation = NanuraiNavigationController(rootViewController: c)
-      //tab.present(navigation, animated: false, completion: nil)
+      UIView.transition(
+        with: window,
+        duration: 0.3,
+        options: [.transitionCrossDissolve],
+        animations: {
+          snapshot.layer.opacity = 0
+      },
+        completion: { _ in
+          snapshot.removeFromSuperview()
+      })
     }
-    
+
     return true
   }
 
@@ -61,53 +85,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
-    self.saveContext()
   }
-
-  // MARK: - Core Data stack
-
-  lazy var persistentContainer: NSPersistentContainer = {
-      /*
-       The persistent container for the application. This implementation
-       creates and returns a container, having loaded the store for the
-       application to it. This property is optional since there are legitimate
-       error conditions that could cause the creation of the store to fail.
-      */
-      let container = NSPersistentContainer(name: "Nani")
-      container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-          if let error = error as NSError? {
-              // Replace this implementation with code to handle the error appropriately.
-              // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-               
-              /*
-               Typical reasons for an error here include:
-               * The parent directory does not exist, cannot be created, or disallows writing.
-               * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-               * The device is out of space.
-               * The store could not be migrated to the current model version.
-               Check the error message to determine what the actual problem was.
-               */
-              fatalError("Unresolved error \(error), \(error.userInfo)")
-          }
-      })
-      return container
-  }()
-
-  // MARK: - Core Data Saving support
-
-  func saveContext () {
-      let context = persistentContainer.viewContext
-      if context.hasChanges {
-          do {
-              try context.save()
-          } catch {
-              // Replace this implementation with code to handle the error appropriately.
-              // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-              let nserror = error as NSError
-              fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-          }
-      }
-  }
-
 }
 

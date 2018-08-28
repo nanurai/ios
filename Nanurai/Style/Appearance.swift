@@ -15,7 +15,7 @@ struct Appearance {
   }
   
   static func setupNavigationBar() {
-    UINavigationBar.appearance().barTintColor = StyleGuide.Color.red
+    UINavigationBar.appearance().barTintColor = StyleGuide.Color.dark
     UINavigationBar.appearance().tintColor = StyleGuide.Color.white
   }
   

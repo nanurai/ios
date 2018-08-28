@@ -9,3 +9,4 @@ github "soffes/Crypto" "v0.5.4"
 github "attaswift/BigInt" ~> 3.0
 github "JohnEstropia/CoreStore" "5.0.0"
 github "freshOS/Stevia" "4.3.0"
+github "nanurai/swift-sodium" "master"
